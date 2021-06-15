@@ -441,23 +441,52 @@ html {
     justify-content: space-evenly;
 }
 
+
 .pricing-card {
+    margin-left: 2rem;
+    perspective: 150rem;
     width: 28rem;
     height: 45rem;
-    background-color: #181b1d;
-    border-radius: 1rem;
-    box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.7);
+    position: relative;
 }
 
 
-.pricing-card__front {
+.pricing-card__side {
+    position: absolute;
     width: 100%;
     height: 100%;
+    background-color: #181b1d;
+    border-radius: 1rem;
+    box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.7);
+    backface-visibility: hidden;
+    transition: all .8s ease;
+}
+
+
+.pricing-card:hover .pricing-card__side {
+    transform: rotateY(-180deg);
+}
+
+.pricing-card:hover .side-back {
+    transform: rotateY(0);
+}
+
+.side-front {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
+
+.side-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    transform: rotateY(180deg);
+}
+
+
 
 .pricing-card__heading {
     font-size: 2rem;
@@ -561,20 +590,8 @@ html {
     background-color: #3be286;
 }
 
-.pricing-card__back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotateY(180deg);
-    border-radius: 1rem;
-}
 
-.pricing-card__back a {
+.pricing-card__side a {
     font-size: 2.5rem;
     color: #fff;
 }
