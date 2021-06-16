@@ -444,7 +444,7 @@ html {
 
 
 .pricing-card {
-    margin-left: 2rem;
+    margin-right: 2rem;
     perspective: 150rem;
     width: 28rem;
     height: 45rem;
@@ -731,4 +731,238 @@ html {
 .copyright {
     font-size: 2rem;
     color: #ddd;
+}
+
+/* Responsive */
+
+/* 1800px */
+@media only screen and (max-width: 112.5em) {
+    .video-wrapper {
+        width: 90rem;
+        height: 45rem;
+        right: 10rem;
+    }
+
+    .section-2__paragraph {
+        width: 90rem;
+        right: 10rem;
+        bottom: 0;
+    }
+
+    .section-3 .section-heading__line {
+        margin-right: 3rem;
+    }
+}
+
+/* 1650px */
+@media only screen and (max-width: 103.125em) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .video-wrapper {
+        width: 85rem;
+        height: 40rem;
+        right: 5rem;
+    }
+
+    .section-2__paragraph {
+        width: 85rem;
+        right: 5rem;
+        bottom: 7rem;
+    }
+}
+
+/* 1500px */
+@media only screen and (max-width: 93.75em) {
+    .section-heading__line {
+        display: none;
+    }
+}
+
+/* 1400px  */
+@media only screen and (max-width: 87.5em) {
+    html {
+        font-size: 45%;
+    }
+
+    .banner__heading span {
+        font-size: 10rem;
+    }
+
+    .banner__paragraph {
+        font-size: 3rem;
+        width: 45rem;
+    }
+
+    .section-2,
+    .section-3,
+    .section-4 {
+        flex-direction: column;
+    }
+
+    .section-2 {
+        height: 120vh;
+    }
+
+    .video-wrapper {
+        width: 80rem;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-2__paragraph {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80rem;
+        bottom: 10rem;
+        justify-content: center;
+    }
+
+    .section-3 {
+        height: auto;
+        padding: 5rem 0 10rem 0;
+    }
+
+    .section-3 .section-heading {
+        margin-bottom: 7rem;
+    }
+
+    .swiper-container {
+        width: 100%;
+    }
+
+    .section-4 {
+        height: auto;
+        padding: 5rem 0;
+    }
+}
+
+/* 900px */
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 40%;
+    }
+
+    .pricing-card {
+        margin: 0 2rem;
+    }
+
+    .banner {
+        top: 35%;
+    }
+
+    .banner__heading {
+        height: 15rem;
+    }
+
+    .banner__heading span {
+        font-size: 8rem;
+    }
+
+    .footer {
+        padding: 0 5rem;
+    }
+}
+
+/* 700px */
+@media only screen and (max-width: 43.75em) {
+    html {
+        font-size: 35%;
+    }
+
+    .section-2 {
+        height: 100vh;
+    }
+
+    .pricing-cards-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .pricing-card {
+        margin-bottom: 5rem;
+    }
+
+    .contact-details div {
+        margin: 3rem 2rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer__nav {
+        margin-bottom: 2rem;
+    }
+}
+
+/* 500px */
+@media only screen and (max-width: 31.25em) {
+    html {
+        font-size: 30%;
+    }
+
+    .banner__heading span {
+        font-size: 4.5rem;
+        letter-spacing: 2rem;
+    }
+
+    @keyframes animateHeading {
+        0% {
+            transform: translateZ(8rem);
+            opacity: 0;
+            letter-spacing: 2rem;
+        }
+
+        3% {
+            transform: translateZ(0);
+            opacity: 1;
+            letter-spacing: 1rem;
+        }
+
+        25% {
+            transform: translateZ(0);
+            opacity: 1;
+            letter-spacing: 1rem;
+        }
+
+        28% {
+            transform: translateZ(8rem);
+            opacity: 0;
+            letter-spacing: 2rem;
+        }
+
+        100% {
+            transform: translateZ(8rem);
+            opacity: 0;
+            letter-spacing: 2rem;
+        }
+
+    }
+
+
+    .video-wrapper {
+        width: 60rem;
+    }
+
+    .section-2__paragraph {
+        width: 60rem
+    }
+
+    .pricing-card__price {
+        font-size: 5rem;
+        font-weight: 100;
+    }
+
+
+    .contact-details div {
+        width: 18rem;
+        margin: 3rem 1rem;
+    }
+
+    .contact-form {
+        width: 60rem;
+    }
 }
